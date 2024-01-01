@@ -8,6 +8,7 @@
 <body>
     <script>
         const person = {
+            //key or property: value pairs
             name: 'Leonardo',
             shirt: 'white',
         }
@@ -24,6 +25,39 @@
         console.log(person.phone);
 
         console.log(person);
+
+        //es6 arrow function (2 arguments)
+        //object
+        //template literals
+        const introducer = (name, shirt) => {
+            const person = {
+                name: name,
+                shirt: shirt,
+                assets: 100000,
+                liabilities: 50000,
+                netWorth: function () {
+                    return this.assets - this.liabilities
+                }
+            }
+
+            const intro = `hi, my name is ${person.name} and the color of my shirt is ${person.shirt} and my networt is $${person.netWorth()}`
+
+            return intro
+        } 
+        console.log(introducer('qazi', 'black'));
+
+        function introducer2(name, shirt) {
+            const person2 = {
+                name: name,
+                shirt: shirt
+            }
+
+            const intro2 = `"hello! i am ${person2.name} and i am wearing a ${person2.shirt} shirt."`
+
+            return intro2
+        }
+        
+        console.log(introducer2('Aristotle', 'blue'));
     </script>
 </body>
 </html>
