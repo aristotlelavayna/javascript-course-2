@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = ['banana', 'apple', 'orange', 'pear']
+        for (let i = 0; i < fruits.length; i++) {       
+            console.log(fruits[i]);
+        }
+
+        ///////////////////// 
+        for (const fruit of fruits) {
+            console.log(fruits);
+        }
+
+        const numbers = [1, 2, 3, 4, 5, 6]
+
+        /////////////////////
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(numbers[i]);
+        }
+
+        /////////////////////
+        const double = (numbers) => {
+            let result = []
+            
+            for (const number of numbers) {
+            result.push(number * 2);
+            }
+            
+            return result
+        }
+        
+        console.log(double([1, 2, 3, 4, 5, 6]));
+
+        /////////////////////
+        const howManyLetters = () => {
+            const phrase = 'hey, can you go to grocery store with me?'
+
+            for (letter in phrase) {
+                console.log(letter);
+            }
+        }
+
+        howManyLetters();
+
+        //////////////////
+        /* const sumArray = (numbers) => {
+            let result = 0;
+
+            for (const number of numbers) {
+                console.log(number);
+                result = result + number
+            }
+            return { result }
+        }
+
+        const nums = [1, 2, 3, 4, 5]
+        console.log(sumArray(nums)); */
+
+        ////////////////////
+        const max = (numbers) => {
+            const result
+
+            return result
+        }
+
+    </script>
+</body>
+</html>
