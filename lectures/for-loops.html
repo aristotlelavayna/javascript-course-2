@@ -64,11 +64,44 @@
 
         ////////////////////
         const max = (numbers) => {
-            const result
+            let result = numbers[0]
 
-            return result
+            for (const number of numbers) {
+                if (number > result) {
+                    result = number
+                }
+            }
+            return { result }
         }
 
+        console.log(max([1, 2, 3, 4, 1, 2, 1, 2, 20, 10]));
+
+        //////////////////
+        const letterFrequency = (phrase) => {
+            console.log(phrase);
+            let frequency = {}
+            for (const letter of phrase) {
+                if (letter in frequency) {
+                    frequency[letter] += 1
+                } else {
+                    frequency[letter] = 1
+                }
+            }
+            return frequency
+        } 
+
+        console.log(letterFrequency('haha'));
+        console.log(letterFrequency('lol, what are you doing later tonight lol, haha'));
+
+        // incremental operators ++ -- +=
+
+        ////////////////////
+        const wordFrequency = (phrase) => {
+            const words = phrase.split(' ')
+            return letterFrequency(words)
+        }
+
+        console.log(wordFrequency('lol what lol yo yo yo'));
     </script>
 </body>
 </html>
