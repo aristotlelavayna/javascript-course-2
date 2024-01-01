@@ -7,15 +7,40 @@
 </head>
 <body>
     <script>
-        food = Number(prompt('how much was the food?'));
+        // this use promt() and alert()
+        /* food = Number(prompt('how much was the food?'));
         tipPercentage = Number(prompt('tip %?')) / 100;
         tipAmount = food * tipPercentage;
         total = food + tipAmount;
 
         console.log('tip amount', tipAmount);
         console.log('total', total);
-        alert(`$${total}`)
+        alert(`$${total}`) */
 
+        // tip calculator that uses function
+        function calculateFoodTotal(food, tip) {
+            const tipPercentage = tip / 100;
+            const tipAmount = food * tipPercentage;
+            const total = food + tipAmount;
+        
+            return total;
+        }
+
+        console.log(calculateFoodTotal(300, 20));
+
+        // ES6
+        // arrow function with explicit return
+        const sumArrow1 = (a, b) => {
+            return a + b;
+        }
+
+        //arrow function with implicit return
+        //IMPORTANT: for implicit return, remove curly braces
+        //this is shorter short cut of above function
+            
+        const sumArrow = (a, b) => a + b;
+
+        console.log(sumArrow(10, 50));
     </script>
 </body>
 </html>
