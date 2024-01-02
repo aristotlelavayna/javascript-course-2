@@ -50,6 +50,27 @@
             {name: 'leonardo', netWorth: 10000000}
         ]
         console.log(actors.filter(actor => actor.netWorth > 10));
+
+        // REDUCE - takes in a function as an argument.
+        // REDUCE - loops and gives you back the accumulator.
+        function sum(a, b) {
+            return a + b
+        }
+        const nums1 = [1, 2, 3]
+        const result1 = nums1.reduce(sum)
+         
+        console.log(result1);
+
+        //////////////////
+        function multiply(a, b) {
+            return a * b
+        }
+        const nums2 = [1, 2, 3, 4]
+        const result2 = nums2.reduce(multiply)
+         
+        console.log(result2);
+        
+
     </script>
 </body>
 </html>
