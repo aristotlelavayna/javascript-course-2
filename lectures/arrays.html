@@ -17,6 +17,39 @@
         console.log(groceries.indexOf('orange'));
 
         console.log(groceries.length);
+
+        // MAP - loops and returns an array
+        [1, 2, 3, 4].map(number => console.log(number));
+
+        const doubleMap = (numbers) => {
+            return numbers.map(number => number * 2)
+        }
+
+        console.log(doubleMap([1, 2, 3]));
+
+        // FILTER - loops and returns an array with matching conditions
+        const filter = (numbers, greaterThan) => {
+            let result = []
+            for (const number of numbers) {
+                if (number > greaterThan) {
+                    result.push(number)
+                }
+            }
+            return result
+        }
+        console.log(filter([1, 2, 3, 4, 5, 6], 3));
+
+        ////////////////
+        const nums = [1, 2, 3, 4, 5, 6]
+        console.log(nums.filter(num => num >= 3));
+
+        ////////////////
+        const actors = [
+            {name: 'johnny', netWorth: 2000000},
+            {name: 'amber', netWorth: 10},
+            {name: 'leonardo', netWorth: 10000000}
+        ]
+        console.log(actors.filter(actor => actor.netWorth > 10));
     </script>
 </body>
 </html>
