@@ -51,6 +51,8 @@
         ]
         console.log(actors.filter(actor => actor.netWorth > 10));
 
+        console.log(actors.reduce((a, b) => a + b.netWorth, 0));
+
         // REDUCE - takes in a function as an argument.
         // REDUCE - loops and gives you back the accumulator.
         function sum(a, b) {
